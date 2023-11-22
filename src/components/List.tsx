@@ -97,9 +97,8 @@ const List: React.FC = () => {
       title: "Quantity",
       dataIndex: "quantity",
       key: "quantity",
-      sorter: (a: { quantity: number }, b: { quantity: number }) =>
-        a.quantity - b.quantity,
-      sortOrder: sortedInfo.columnKey === "quantity" ? sortedInfo.order : null,
+      // sorter: (a: { quantity: number }, b: { quantity: number }) => a.quantity - b.quantity,
+      // sortOrder: sortedInfo.columnKey === "quantity" ? sortedInfo.order : null,
       ellipsis: true,
       sortDirections: ["ascend", "descend", "ascend"],
       render: (_text: any, record: { quantity: any; units: any }) => (
@@ -132,14 +131,14 @@ const List: React.FC = () => {
           className="w-full"
           placeholder="Filter type of grocery"
         />
-        <Input placeholder="Search items" rootClassName="w-full" />
+        <Input placeholder="Search items" rootClassName="w-1/2"/>
         <Button onClick={handleClearAll} > Clear All </Button>
       </Flex>
       <Table
         columns={columns}
         onChange={handleChange}
         dataSource={tableData.value}
-        className="flex"
+        pagination={{hideOnSinglePage: true}}
       />
     </>
   );

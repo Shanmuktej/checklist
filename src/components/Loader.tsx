@@ -7,8 +7,8 @@ function Loader() {
   showSpinner = useSignal(true);
   return (
     <div
-      className={`absolute z-10 h-full flex items-center justify-center ${ showSpinner.value ? "fadeIn" : "fadeOut" }`}
-      style={{width: "96%"}}
+      className={`absolute z-10 flex items-center justify-center ${ showSpinner.value ? "fadeIn" : "fadeOut" }`}
+      style={{height: "92%", width: "96%"}}
     >
       <DotLottiePlayer
         src="../src/images/vegies_walking.lottie"
