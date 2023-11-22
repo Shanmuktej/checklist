@@ -7,12 +7,11 @@ function Loader() {
   showSpinner = useSignal(true);
   return (
     <div
-      className={`absolute z-10 h-full w-full flex items-center justify-center z-10 ${
-        showSpinner.value ? "fadeIn" : "fadeOut"
-      }`}
+      className={`absolute z-10 h-full flex items-center justify-center ${ showSpinner.value ? "fadeIn" : "fadeOut" }`}
+      style={{width: "96%"}}
     >
       <DotLottiePlayer
-        src="/checklist/src/images/vegies_walking.lottie"
+        src="../src/images/vegies_walking.lottie"
         className="ml-8"
         autoplay
         loop

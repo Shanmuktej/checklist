@@ -40,9 +40,14 @@ const List: React.FC = () => {
   }, []);
 
   effect(() => {
+    let filteredOptions = selectedOptions?.value
     console.log(selectedOptions?.value)
-    let filteredCategories = allData.value.filter(data => selectedOptions.value.includes(data.name))
-    console.log(filteredCategories.map(x => x.values))
+    if(selectedOptions?.value == undefined || selectedOptions?.value.length == 0){
+      filteredOptions = allData.value.map(x => x.name);
+      console.log(allData.value)
+      console.log(filteredOptions)
+    }
+    let filteredCategories = allData.value.filter(data => filteredOptions?.includes(data.name))
     tableData.value = filteredCategories.flatMap(x => x.values)
   });
 
@@ -54,7 +59,6 @@ const List: React.FC = () => {
   const handleClearAll = () => {
     setSortedInfo({});
     selectedOptions.value = []
-    // selectRef?.current?.clearOptions();
   }
 
   const columns: ColumnsType<any> = [
@@ -65,10 +69,10 @@ const List: React.FC = () => {
       sorter: (a: ItemType, b: ItemType) => a.name.localeCompare(b.name),
       sortOrder: sortedInfo.columnKey === "name" ? sortedInfo.order : null,
       ellipsis: true,
-      className:"w-36",
+      className: "w-1/2",
       sortDirections: ["ascend", "descend", "ascend"],
       render: (_text: any, record: ItemType) => (
-        <div className="flex flex-row items-center">
+        <div className="flex flex-row items-center w-1/2">
           {/* <Image
             src={record.image}
             width={50}
@@ -104,17 +108,16 @@ const List: React.FC = () => {
         </>
       ),
     },
-    {
+    /* {
       title: "Add to Cart",
       key: "itemsInCart",
       render: (_text: any) => (
         <>
           <Button onClick={() => setSortedInfo({})}>-</Button>
-            
           <Button onClick={() => setSortedInfo({})}>+</Button>
         </>
       ),
-    },
+    }, */
   ];
 
   return (
@@ -136,6 +139,7 @@ const List: React.FC = () => {
         columns={columns}
         onChange={handleChange}
         dataSource={tableData.value}
+        className="flex"
       />
     </>
   );
