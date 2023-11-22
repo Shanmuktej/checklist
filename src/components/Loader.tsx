@@ -11,7 +11,7 @@ function Loader() {
       style={{height: "92%", width: "96%"}}
     >
       <DotLottiePlayer
-        src="./../../src/images/vegies_walking.lottie"
+        src="./vegies_walking.lottie"
         className="ml-8"
         autoplay
         loop

@@ -12,7 +12,7 @@ export function App() {
         style=" margin: 24px"
       >
         <DotLottiePlayer
-          src="./src/images/check.lottie"
+          src="./check.lottie"
           className="h-11 w-11"
           autoplay
           loop
