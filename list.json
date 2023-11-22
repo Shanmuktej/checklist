@@ -1,0 +1,398 @@
+[
+  {
+    "name": "Vegetables",
+    "key": "vegetables",
+    "values": [
+      {
+        "name": "Tomato",
+        "price": 16,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://cdn.britannica.com/68/166868-050-16FB2695/Tomato.jpg"
+      },
+      {
+        "name": "Onion",
+        "price": 30,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://post.healthline.com/wp-content/uploads/2020/09/Onions_3264x2448-Feature-732x549-Thumbnail-732x549.jpg"
+      },
+      {
+        "name": "Potato",
+        "price": 20,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://post.healthline.com/wp-content/uploads/2020/09/potatoes-732x549-thumbnail-732x549.jpg"
+      },
+      {
+        "name": "Green Chillies",
+        "price": 20,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://www.licious.in/blog/wp-content/uploads/2021/06/Green-Chilli.jpg"
+      },
+      {
+        "name": "Garlic Small",
+        "price": 40,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://post.healthline.com/wp-content/uploads/2020/10/315720-How-to-Peel-Garlic-732x549-Thumbnail.jpg"
+      },
+      {
+        "name": "Garlic Big",
+        "price": 45,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://post.healthline.com/wp-content/uploads/2020/10/315720-How-to-Peel-Garlic-732x549-Thumbnail.jpg"
+      },
+      {
+        "name": "Ginger",
+        "price": 30,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://post.healthline.com/wp-content/uploads/2020/09/Ginger_Root_Fresh-732x549-Thumbnail.jpg"
+      },
+      {
+        "name": "Cauliflower",
+        "price": 35,
+        "quantity": 1,
+        "units": "piece",
+        "image": "https://post.healthline.com/wp-content/uploads/2020/09/cauliflower-facts-732x549-thumbnail.jpg"
+      },
+      {
+        "name": "Beetroot",
+        "price": 40,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://post.healthline.com/wp-content/uploads/2020/09/beets-732x549-thumbnail.jpg"
+      },
+      {
+        "name": "Ridge Gourd",
+        "price": 45,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/ridge-gourd.jpg"
+      },
+      {
+        "name": "Brinjal Violet",
+        "price": 40,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2019/03/brinjal.jpg"
+      },
+      {
+        "name": "Cucumber",
+        "price": 25,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/cucumber.jpg"
+      },
+      {
+        "name": "Bittergourd",
+        "price": 40,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Bitter-Gourd.jpg"
+      },
+      {
+        "name": "Radish",
+        "price": 25,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Radish.jpg"
+      },
+      {
+        "name": "Sweet Corn",
+        "price": 60,
+        "quantity": 4,
+        "units": "pieces",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/corn-on-the-cob.jpg"
+      },
+      {
+        "name": "Pumpkin",
+        "price": 60,
+        "quantity": 500,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Pumpkin.jpg"
+      },
+      {
+        "name": "Drumsticks",
+        "price": 15,
+        "quantity": 1,
+        "units": "piece",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/drumstick.jpg"
+      },
+      {
+        "name": "Bottle Gourd",
+        "price": 40,
+        "quantity": 1,
+        "units": "piece",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Bottle-gourd.jpg"
+      },
+      {
+        "name": "Coccinia",
+        "price": 23,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Coccinia.jpg"
+      },
+      {
+        "name": "Beans",
+        "price": 40,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/french-beans.jpg"
+      },
+      {
+        "name": "Cabbage",
+        "price": 40,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Cabbage.jpg"
+      },
+      {
+        "name": "Colocasia",
+        "price": 25,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Colocasia.jpg"
+      },
+      {
+        "name": "Dry Red Chillies",
+        "price": 60,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Red-Chilli.jpg"
+      },
+      {
+        "name": "Ladies Finger",
+        "price": 30,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/okra.jpg"
+      },
+      {
+        "name": "Sweet Potato",
+        "price": 25,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Sweet-Potato.jpg"
+      },
+      {
+        "name": "Cluster Beans",
+        "price": 70,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Guar-phalli-cluster-beans.jpg"
+      },
+      {
+        "name": "Broad Beans",
+        "price": 40,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Broad-Beans.jpg"
+      },
+      {
+        "name": "Capsicum",
+        "price": 35,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/capsicum.jpg"
+      },
+      {
+        "name": "Carrot",
+        "price": 35,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/carrots.jpg"
+      },
+      {
+        "name": "Green Banana",
+        "price": 8,
+        "quantity": 1,
+        "units": "piece",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/raw-banana.jpg"
+      },
+      {
+        "name": "Yam",
+        "price": 20,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/yam.jpg"
+      },
+      {
+        "name": "Snake Gourd",
+        "price": 40,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/snake-gourd.jpg"
+      },
+      {
+        "name": "Tapioca",
+        "price": 30,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Tapioca.jpg"
+      },
+      {
+        "name": "Brinjal Green/White",
+        "price": 40,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/white-brinjal.jpg"
+      },
+      {
+        "name": "Small Bitter Gourd",
+        "price": 65,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Bitter-Gourd.jpg"
+      },
+      {
+        "name": "Raw Groundnuts",
+        "price": 70,
+        "quantity": 500,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/peanuts.jpg"
+      },
+      {
+        "name": "Green Peas",
+        "price": 90,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Green-Peas.jpg"
+      },
+      {
+        "name": "Cauliflower",
+        "price": 30,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Cauliflower.jpg"
+      },
+      {
+        "name": "Broccoli",
+        "price": 50,
+        "quantity": 500,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Broccoli.jpg"
+      },
+      {
+        "name": "Cucumber",
+        "price": 20,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/cucumber.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Leafy Vegetables",
+    "key": "leafyVegetables",
+    "values": [
+      {
+        "name": "Spinach",
+        "price": 15,
+        "quantity": 200,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Spinach.jpg"
+      },
+      {
+        "name": "Fenugreek Leaves",
+        "price": 20,
+        "quantity": 200,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/fenugreek-leaves.jpg"
+      },
+      {
+        "name": "Coriander Leaves",
+        "price": 10,
+        "quantity": 100,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Coriander-Leaves.jpg"
+      },
+      {
+        "name": "Curry Leaves",
+        "price": 15,
+        "quantity": 50,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Curry-Leaves.jpg"
+      },
+      {
+        "name": "Mint Leaves",
+        "price": 10,
+        "quantity": 50,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/mint-leaves.jpg"
+      },
+      {
+        "name": "Basil Leaves",
+        "price": 20,
+        "quantity": 50,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Basil.jpg"
+      },
+      {
+        "name": "Dill Leaves",
+        "price": 15,
+        "quantity": 50,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Dill-Leaves.jpg"
+      },
+      {
+        "name": "Celery Leaves",
+        "price": 10,
+        "quantity": 100,
+        "units": "gm",
+        "image": "https://mridula.co.in/wp-content/uploads/2021/06/Celery-Leaves.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Fruits",
+    "key": "fruits",
+    "values": [
+      {
+        "name": "Banana",
+        "price": 35,
+        "quantity": 1,
+        "units": "dozen",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Bananas_white_background_DS.jpg"
+      },
+      {
+        "name": "Apple",
+        "price": 150,
+        "quantity": 1,
+        "units": "kg",
+        "image": "./png-transparent-sliced-apple-with-leaf-apple-juice-green-purxe9e-apple-natural-foods-food-green-apple-thumbnail.png"
+      },
+      {
+        "name": "Orange",
+        "price": 80,
+        "quantity": 1,
+        "units": "dozen",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Oranges_-_whole-halved-segment.jpg"
+      },
+      {
+        "name": "Grapes",
+        "price": 90,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Table_grapes_on_white.jpg"
+      },
+      {
+        "name": "Papaya",
+        "price": 35,
+        "quantity": 1,
+        "units": "dozen",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Papaya_fruit.jpg"
+      },
+      {
+        "name": "Mango",
+        "price": 80,
+        "quantity": 1,
+        "units": "kg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Mangoes_in_India_02.jpg"
+      }
+    ]
+  }
+]
