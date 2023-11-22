@@ -9,7 +9,7 @@ export function App() {
       <Loader />
       <header className="flex flex-row place-content-center xl:my-24">
         <DotLottiePlayer
-          src="/src/images/check.lottie"
+          src="/checklist/src/images/check.lottie"
           className="h-11 w-11"
           autoplay
           loop

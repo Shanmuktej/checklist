@@ -12,7 +12,7 @@ function Loader() {
       }`}
     >
       <DotLottiePlayer
-        src="/src/images/vegies_walking.lottie"
+        src="/checklist/src/images/vegies_walking.lottie"
         className="ml-8"
         autoplay
         loop
