@@ -14,14 +14,14 @@ export type SelectRefType = {
   selectedItems: string[]
 }
 
-export let selectedItems: Signal
+export let selectedItems: Signal<null| string[]>
 
 const Select = ({ options, className, placeholder }: props) => {
 
   selectedItems = useSignal<string[]>([]);
 
   const filteredOptions = options.filter(
-    (type) => !selectedItems.value.includes(type.key)
+    (type) => !selectedItems.value?.includes(type.key)
   );
   
   const handleChange = (item: any) => {

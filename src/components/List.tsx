@@ -1,5 +1,5 @@
-import { effect, useSignal } from "@preact/signals";
-import type { TableProps } from "antd";
+import { computed, useSignal } from "@preact/signals";
+import type { InputRef, TableProps } from "antd";
 import { Button, Flex, Table } from "antd";
 import Input from "antd/es/input/Input";
 import type {
@@ -7,7 +7,7 @@ import type {
   SorterResult
 } from "antd/es/table/interface";
 import axios from 'axios';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { showSpinner } from "./Loader";
 import Select, { selectedItems as selectedOptions } from "./Select";
 
@@ -26,39 +26,50 @@ type ItemType = {
 };
 
 const List: React.FC = () => {
-  const [sortedInfo, setSortedInfo] = useState<SorterResult<ItemType>>({});
+  const searchRef = useRef(null)
+  const sortedInfo = useSignal<SorterResult<ItemType>>({});
   const allData = useSignal<DataType[]>([])
-  const tableData = useSignal<any>([])
-
+  const searchValue = useSignal<string>("")
+  const emptyTableValue: ItemType = {
+    name: "string",
+    price: 0,
+    quantity: 0,
+    units: "string",
+    image: "string"
+  }
   useEffect(() => {
     axios
       .get("https://mocki.io/v1/99d2e61d-e249-4c28-9ab7-000e5b8609a2")
       .then((response) => {
         showSpinner.value = false
-        allData.value= response.data
+        allData.value = response.data
       });
   }, []);
 
-  effect(() => {
-    let filteredOptions = selectedOptions?.value
-    console.log(selectedOptions?.value)
-    if(selectedOptions?.value == undefined || selectedOptions?.value.length == 0){
-      filteredOptions = allData.value.map(x => x.name);
-      console.log(allData.value)
-      console.log(filteredOptions)
-    }
-    let filteredCategories = allData.value.filter(data => filteredOptions?.includes(data.name))
-    tableData.value = filteredCategories.flatMap(x => x.values)
+  const filteredCategories = computed(() => {
+    let filteredOptions =
+      selectedOptions == null || selectedOptions.value?.length == 0
+        ? allData.value.map((x) => x.name)
+        : selectedOptions.value;
+    return allData.value.filter((data) => filteredOptions?.includes(data.name));
   });
+  
+  const tableValues = computed(() => {
+    console.log(filteredCategories.value)
+    let allFilteredData = filteredCategories.value.flatMap(x => x.values ?? emptyTableValue)
+    allFilteredData = allFilteredData.filter(data => Object.values(data).some(value => value.toString().toLowerCase().includes(searchValue.value.toLowerCase())))
+    return allFilteredData
+  })
 
-  const handleChange: TableProps<ItemType>["onChange"] = ( pagination, filters, sorter ) => {
-    console.log("Various parameters", pagination, filters, sorter);
-    setSortedInfo(sorter as SorterResult<ItemType>);
+  const handleChange: TableProps<ItemType>["onChange"] = ( _pagination, _filters, sorter ) => {
+    sortedInfo.value = sorter as SorterResult<ItemType>
   };
 
   const handleClearAll = () => {
-    setSortedInfo({});
+    sortedInfo.value = {}
     selectedOptions.value = []
+    searchValue.value = ""
+    searchRef.current = null
   }
 
   const columns: ColumnsType<any> = [
@@ -67,7 +78,7 @@ const List: React.FC = () => {
       dataIndex: "name",
       key: "name",
       sorter: (a: ItemType, b: ItemType) => a.name.localeCompare(b.name),
-      sortOrder: sortedInfo.columnKey === "name" ? sortedInfo.order : null,
+      sortOrder: sortedInfo.value.columnKey === "name" ? sortedInfo.value.order : null,
       ellipsis: true,
       className: "w-1/2",
       sortDirections: ["ascend", "descend", "ascend"],
@@ -89,7 +100,7 @@ const List: React.FC = () => {
       dataIndex: "price",
       key: "price",
       sorter: (a: ItemType, b: ItemType) => a.price - b.price,
-      sortOrder: sortedInfo.columnKey === "price" ? sortedInfo.order : null,
+      sortOrder: sortedInfo.value.columnKey === "price" ? sortedInfo.value.order : null,
       ellipsis: true,
       sortDirections: ["ascend", "descend", "ascend"],
     },
@@ -97,8 +108,6 @@ const List: React.FC = () => {
       title: "Quantity",
       dataIndex: "quantity",
       key: "quantity",
-      // sorter: (a: { quantity: number }, b: { quantity: number }) => a.quantity - b.quantity,
-      // sortOrder: sortedInfo.columnKey === "quantity" ? sortedInfo.order : null,
       ellipsis: true,
       sortDirections: ["ascend", "descend", "ascend"],
       render: (_text: any, record: { quantity: any; units: any }) => (
@@ -131,13 +140,13 @@ const List: React.FC = () => {
           className="w-full"
           placeholder="Filter type of grocery"
         />
-        <Input placeholder="Search items" rootClassName="w-1/2"/>
-        <Button onClick={handleClearAll} > Clear All </Button>
+        <Input placeholder="Search items" rootClassName="w-1/2" ref={searchRef} onChange={(event:any) => searchValue.value = event.target.value} />
+        <Button onClick={handleClearAll} > Clear Filters </Button>
       </Flex>
       <Table
         columns={columns}
         onChange={handleChange}
-        dataSource={tableData.value}
+        dataSource={tableValues.value}
         pagination={{hideOnSinglePage: true}}
       />
     </>
