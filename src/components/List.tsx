@@ -1,5 +1,5 @@
 import { computed, useSignal } from "@preact/signals";
-import type { InputRef, TableProps } from "antd";
+import type { TableProps } from "antd";
 import { Button, Flex, Table } from "antd";
 import Input from "antd/es/input/Input";
 import type {
