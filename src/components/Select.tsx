@@ -1,6 +1,6 @@
 import { Signal, useSignal } from "@preact/signals";
 import { Select as AntdSelect } from "antd";
-import { DataType } from "./List";
+import { DataType } from "./ItemList";
 
 type props = {
   options: DataType[];

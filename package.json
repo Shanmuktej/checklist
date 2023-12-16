@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.6",
     "@dotlottie/player-component": "^2.7.0",
     "@dotlottie/react-player": "^1.6.3",
     "@preact/signals": "^1.2.1",

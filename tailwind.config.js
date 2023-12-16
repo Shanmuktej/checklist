@@ -9,13 +9,20 @@ export default {
       animation: {
         fade: 'hidden fadeOut 0.8s ease-in-out',
       },
+      screens: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
 
-        keyframes: theme => ({
-          fadeOut: {
-            '0%': { opacity: 100, scale: 100 },
-            '100%': { opacity: 0, scale: 0, visibility: 'hidden' },
-          },
-        }),
+      keyframes: theme => ({
+        fadeOut: {
+          '0%': { opacity: 100, scale: 100 },
+          '100%': { opacity: 0, scale: 0, visibility: 'hidden' },
+        },
+      }),
     },
   },
   plugins: [

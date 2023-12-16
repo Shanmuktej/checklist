@@ -34,3 +34,23 @@
 #app {
     height: 100%;
 }
+
+:where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-cell, :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-thead>tr>th, :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-tbody>tr>th, :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper .ant-table-tbody>tr>td, :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper tfoot>tr>th, :where(.css-dev-only-do-not-override-nllxry).ant-table-wrapper tfoot>tr>td{
+    padding: 12px 8px;
+}
+.ant-select-dropdown-menu-item.sticky-option {
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Ensure it stays above other options */
+    background-color: #fff; /* Adjust as needed */
+}
+[title="Remove Item"]{
+    z-index: 1; /* Ensure it stays above other options */
+    position: sticky!important;
+    top: 0;
+
+    background-color: red;
+    font-weight: bolder!important;
+    font-variant: small-caps;
+    font-size: larger!important;
+}

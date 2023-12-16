@@ -1,0 +1,6 @@
+.custom-row-hover:hover td {
+    background: rgb(45 212 191) !important;
+}
+.ant-select-selection-item{
+    text-align: center;
+}
